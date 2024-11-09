@@ -1,0 +1,12 @@
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - ffmpeg=6.1.1
+  - pip:
+      - cottoncandy==0.2.0
+      - ipdb==0.13.13
+      - numpy==1.26.4
+      - torchaudio==2.5.0
+      - torchvision==0.20.0
+      - tqdm==4.66.5

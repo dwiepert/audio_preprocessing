@@ -1,0 +1,5 @@
+{
+    "monochannel":{},
+    "resample":{"resample_rate":16000},
+    "format":"flac"
+}
