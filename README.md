@@ -6,7 +6,7 @@ To install, use
 
 ```
 $ git clone https://github.com/dwiepert/audio_preprocessing.git
-$ cd database_utils
+$ cd audio_preprocessing
 $ pip install . 
 ```
 
