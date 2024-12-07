@@ -15,7 +15,7 @@ Additionally install ffmpeg=6.1.1.
 The dependency environment is also specified in environment.yml (excluding local dependencies)
 
 
-A major dependency of this package is the local package 'database_utils'. This can be found at [database_utils][https://github.com/dwiepert/database_utils]. Install this and ensure that it is either run on a computer with access to corral (through cotton candy) or use an ssh tunnel by running the following in your local terminal ```ssh -L 5000:127.0.0.1:5000 USERNAME@COMPUTER.biosci/cs.utexas.edu```
+A major dependency of this package is the local package 'database_utils'. This can be found at [database_utils](https://github.com/dwiepert/database_utils). Install this and ensure that it is either run on a computer with access to corral (through cotton candy) or use an ssh tunnel by running the following in your local terminal ```ssh -L 5000:127.0.0.1:5000 USERNAME@COMPUTER.biosci/cs.utexas.edu```
 
 ## Functions
 ### audio_preprocessing.io
