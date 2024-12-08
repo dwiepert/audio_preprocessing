@@ -3,3 +3,4 @@ audio_preprocessing/__pycache__/__init__.cpython-39.pyc
 .DS_Store
 *.pyc
 /build
+/.vscode
