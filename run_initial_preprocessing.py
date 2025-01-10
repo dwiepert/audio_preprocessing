@@ -7,7 +7,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--outdir", type=str, required=True)
     parser.add_argument("--transform_json", type=str, default='audio_preprocessing/configs/transform_config.json')
-    parser.add_argument("--stim_bucket", default="stimulidb")
+    parser.add_argument("--stim_bucket", default=None)
     parser.add_argument("--stories", nargs="+")
     parser.add_argument("--sessions", nargs="+", default=['1'])
     parser.add_argument("--recursive", action='store_true')

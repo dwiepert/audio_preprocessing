@@ -30,7 +30,7 @@ def load_stimuli(stim_bucket:str, sessions:List[str]=None, stories:List[str]=Non
         return stories, None
     else:
         assert in_dir is not None, 'Must give either stimulus bucket for accessing corral stimulus or a path containining stimulus'
-        stories, story_paths = _load_from_dir(in_dir, sessions, stories, recursive)
+        stories, story_paths = _load_from_dir(in_dir, stories, recursive)
         return stories, story_paths
 
 def _load_from_bucket(stim_bucket:str, sessions:List[str]=None, stories:List[str]=None):
@@ -75,10 +75,13 @@ def _load_from_dir(in_dir:Union[str,Path], stories:List[str], recursive:bool):
     assert in_dir.exists()
 
     if recursive:
-        story_paths = sorted(list(in_dir.rglob('*.wav')))
+        story_paths_wav = sorted(list(in_dir.rglob('*.wav')))
+        story_paths_flac = sorted(list(in_dir.rglob('*.flac')))
     else:
-        story_paths = sorted(list(in_dir.glob('*.wav')))
-    
+        story_paths_wav = sorted(list(in_dir.glob('*.wav')))
+        story_paths_flac = sorted(list(in_dir.glob('*.flac')))
+        
+    story_paths = sorted(story_paths_wav + story_paths_flac)
     # Strip the extension to get the "name" of the stimulus, and make it
     # relative to the stimulus directory
     stories = [str(x.relative_to(in_dir).with_suffix('')) for x in story_paths]

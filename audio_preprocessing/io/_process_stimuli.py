@@ -9,6 +9,7 @@ Last modified: 10/31/2024
 import re
 import shutil
 import tempfile
+import os
 from pathlib import Path
 from typing import List,Dict,Union
 
@@ -52,7 +53,8 @@ def process_stimuli(out_dir:Union[str,Path], stim_bucket:str, transforms:Dict, s
         
         out_wav_path = processed_stimulus_dir / f'{story}.flac'
         # Make the necessary dirs for the processed stimulus
-        out_wav_path.parent.mkdir(exist_ok=True)
+        os.makedirs(out_wav_path.parent, exist_ok=True)
+        #out_wav_path.parent.mkdir(exist_ok=True)
         
         sample = {'path': orig_wav_path, 'out_path': out_wav_path}
         
