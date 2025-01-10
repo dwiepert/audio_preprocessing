@@ -10,7 +10,7 @@ setup(
         'numpy==1.26.4',
         'ipdb==0.13.13',
         'cottoncandy==0.2.0',
-        'torchaudio==2.2.0',
+        'torchaudio==2.2.2',
         'torchvision==0.17.2',
         'torch==2.2.2',
         'tqdm==4.66.5'
